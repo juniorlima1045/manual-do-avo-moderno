@@ -356,6 +356,29 @@
     flex-direction: column;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+/* --- NOVOS ESTILOS PARA A OFERTA --- */
+.pricing-card .price-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px; /* Espaço entre os preços */
+    margin: 10px 0;
+}
+
+.pricing-card .old-price {
+    font-size: 1.5em; /* Tamanho menor para o preço antigo */
+    color: #999; /* Cor cinza para indicar que está inativo */
+    text-decoration: line-through; /* O efeito de riscado */
+}
+
+.pricing-card .new-price {
+    font-size: 2.5em; /* Mantém o destaque no novo preço */
+    font-weight: bold;
+    color: #d9534f; /* Cor principal da oferta */
+}
+/* --- FIM DOS NOVOS ESTILOS --- */
+
 .pricing-card:hover {
     transform: translateY(-10px);
     box-shadow: 0 12px 35px rgba(0,0,0,0.12);
@@ -617,9 +640,16 @@
             <!-- Card do Ebook -->
             <div class="pricing-card">
                 <!--div class="recommended-badge">Mais Vendido</div-->
+	<!-- Implantacao da oferta  -->
                 <h3>Versão Digital (Ebook)</h3>
-                <p class="price">R$ 49,90</p>
-                <p class="price-note">Pagamento único</p>
+		<div class="price-wrapper">
+    		  <span class="old-price">R$ 59,90</span>
+    		  <span class="new-price">R$ 27,70</span>
+	        </div>
+	        <p class="price-note">Oferta de Lançamento!</p>
+
+	<!-- Fim Implantacao da oferta  -->
+
                 <ul>
                     <li>Acesso imediato após a compra</li>
                     <li>Leia no celular, tablet ou computador</li>
@@ -634,9 +664,18 @@
             <!-- Card do Livro Físico -->
             <div class="pricing-card recommended">
 		<div class="recommended-badge">Mais Vendido</div>
-                <h3>Versão Impressa</h3>
-                <p class="price">R$ 89,90</p>
-                <p class="price-note"> frete incluso</p>
+
+	<!-- Implantacao da oferta -->
+
+              <h3>Versão Impressa</h3>
+	      <div class="price-wrapper">
+   	 	<span class="old-price">R$ 89,90</span>
+    		<span class="new-price">R$ 77,70</span>
+	      </div>
+              <p class="price-note">Oferta de Lançamento + Frete Incluso</p>
+
+	<!-- Fim Implantacao da oferta  -->
+
                 <ul>
                     <li>A experiência clássica da leitura</li>
                     <li>Perfeito para presentear um avô querido</li>
