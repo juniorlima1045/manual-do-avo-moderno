@@ -1,708 +1,173 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Manual do Avô Moderno - O Guia Definitivo</title>
-    <style>
-        /* Estilos da Seção 2 (Conexão) */
-.connection {
-    padding: 80px 0;
-    background-color: #ffffff; /* Fundo branco para contraste */
-}
-.connection-content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 60px;
-    flex-wrap: wrap; /* Permite que os itens quebrem em telas menores */
-}
-.connection-text {
-    max-width: 500px;
-    text-align: left;
-}
-.connection-text h2 {
-    font-size: 2.5em;
-    color: #4a4a4a;
-    margin-top: 0;
-    line-height: 1.2;
-}
-.connection-text p {
-    font-size: 1.1em;
-    line-height: 1.6;
-    color: #5f5f5f;
-}
-.connection-image img {
-    max-width: 400px;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-}
-/* Estilos Gerais */
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: 'Helvetica Neue', Arial, sans-serif;
-            margin: 0;
-            color: #333;
-            background-color: #fdfaf5; /* Um tom de creme bem claro */
-        }
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* Estilos da Seção 1 (Hero) */
-
-        .hero {
-            background-color: #f4efe8; /* Cor de fundo suave */
-            padding: 60px 0;
-            text-align: center;
-        }
-        .hero-content {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 25px;
-        }
-        .hero h1 {
-            font-size: 2.8em;
-            color: #4a4a4a;
-            margin: 0;
-            line-height: 1.2;
-            max-width: 600px;
-        }
-        .hero p {
-            font-size: 1.2em;
-            color: #5f5f5f;
-            max-width: 550px;
-            margin: 0;
-        }
-        .hero img.ebook-cover {
-            max-width: 300px;
-            height: auto;
-            border-radius: 8px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-            margin-top: 20px;
-        }
-        .cta-button {
-            background-color: #d9534f; /* Um tom de vermelho/laranja acolhedor */
-            color: white;
-            padding: 15px 30px;
-            border: none;
-            border-radius: 8px;
-            font-size: 1.2em;
-            font-weight: bold;
-            text-decoration: none;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-        .cta-button:hover {
-            background-color: #c9302c;
-        }
-        .trust-text {
-            font-size: 0.9em;
-            color: #777;
-            margin-top: -15px;
-        }
-
-        /* Responsividade para Celulares */
-
-/* Estilos da Seção 3 (Solução/Benefícios) */
-
-.solution {
-    padding: 80px 0;
-    background-color: #fdfaf5; /* Retorna ao tom de creme claro */
-}
-.solution-header {
-    text-align: center;
-    margin-bottom: 60px;
-}
-.solution-header h2 {
-    font-size: 2.5em;
-    color: #4a4a4a;
-    margin-top: 0;
-}
-.solution-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Grid responsivo */
-    gap: 40px;
-}
-.benefit-item {
-    text-align: center;
-}
-.benefit-item .icon {
-    font-size: 3em; /* Tamanho do ícone */
-    color: #d9534f; /* Mesma cor do botão para consistência */
-    margin-bottom: 15px;
-}
-.benefit-item h3 {
-    font-size: 1.4em;
-    color: #4a4a4a;
-    margin-bottom: 10px;
-}
-.benefit-item p {
-    font-size: 1em;
-    line-height: 1.6;
-    color: #5f5f5f;
-}
-
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2.2em;
-            }
-            .hero p {
-                font-size: 1em;
-            }
-        }
-
-/* Estilos da Seção 4 (Prova Social/Depoimentos) */
-
-.testimonials {
-    padding: 80px 0;
-    background-color: #ffffff; /* Fundo branco */
-}
-.testimonials-header {
-    text-align: center;
-    margin-bottom: 60px;
-}
-.testimonials-header h2 {
-    font-size: 2.5em;
-    color: #4a4a4a;
-    margin-top: 0;
-}
-.testimonials-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-}
-.testimonial-card {
-    background-color: #fdfaf5; /* Tom de creme para os cards */
-    padding: 30px;
-    border-radius: 8px;
-    border-left: 5px solid #d9534f; /* Detalhe com a cor principal */
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-}
-.testimonial-card p.quote {
-    font-style: italic;
-    font-size: 1.1em;
-    color: #5f5f5f;
-    margin-top: 0;
-    margin-bottom: 20px;
-    line-height: 1.6;
-}
-.testimonial-card p.author {
-    font-weight: bold;
-    color: #333;
-    margin: 0;
-    text-align: center;
-}
-/* Estilos da Seção 5 (Sobre o Autor) */
-.author {
-    padding: 80px 0;
-    background-color: #fdfaf5; /* Tom de creme */
-}
-.author-content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 60px;
-    flex-wrap: wrap;
-}
-.author-photo {
-    flex-shrink: 0; /* Impede que a imagem encolha */
-}
-.author-photo img {
-    width: 280px;
-    height: 280px;
-    object-fit: cover; /* Garante que a foto não fique distorcida */
-    border-radius: 50%; /* Formato de círculo para a foto */
-    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-}
-.author-bio {
-    max-width: 600px;
-    text-align: left;
-}
-.author-bio h2 {
-    font-size: 2.5em;
-    color: #4a4a4a;
-    margin-top: 0;
-    margin-bottom: 20px;
-}
-.author-bio p {
-    font-size: 1.1em;
-    line-height: 1.7;
-    color: #5f5f5f;
-}
-
-/* Estilos da Seção 6 (Oferta Final) */
-
-.final-cta {
-    padding: 80px 0;
-    background-color: #4a4a4a; /* Fundo escuro para criar impacto */
-    color: #ffffff;
-    text-align: center;
-}
-.final-cta h2 {
-    font-size: 2.5em;
-    margin-top: 0;
-    margin-bottom: 20px;
-}
-.final-cta p {
-    font-size: 1.2em;
-    max-width: 600px;
-    margin: 0 auto 40px auto;
-    opacity: 0.9;
-}
-/* CSS CORRIGIDO E MELHORADO */
-.final-cta .ebook-cover-small {
-    display: block; /* Trata a imagem como um bloco */
-    margin: 0 auto 40px auto; /* Centraliza horizontalmente e mantém a margem inferior */
-    max-width: 250px;
-    border-radius: 8px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-}
-
-}
-.final-cta .cta-button {
-    padding: 20px 40px;
-    font-size: 1.4em;
-    transform: scale(1);
-    transition: transform 0.3s ease;
-}
-.final-cta .cta-button:hover {
-    transform: scale(1.05); /* Efeito de crescimento no hover */
-}
-
-/* Estilos do Rodapé */
-
-.footer {
-    padding: 40px 20px;
-    text-align: center;
-    background-color: #fdfaf5;
-    color: #777;
-    font-size: 0.9em;
-}
-.footer a {
-    color: #d9534f;
-    text-decoration: none;
-}
-.footer a:hover {
-    text-decoration: underline;
-}
-.footer .social-icon {
-    font-size: 1.5em;
-    margin-top: 10px;
-}
-/* --- INÍCIO DAS NOVAS REGRAS DE RESPONSIVIDADE --- */
-
-/* Esconde o texto de celular por padrão (em telas grandes) */
-.mobile-text {
-    display: none;
-}
-
-/* Regras para telas de celular (largura máxima de 768px) */
-@media (max-width: 768px) {
-    /* Esconde o texto de desktop em telas pequenas */
-    .desktop-text {
-        display: none;
-    }
-
-    /* Mostra o texto de celular em telas pequenas */
-    .mobile-text {
-        display: inline; /* ou 'block', ambos funcionam aqui */
-    }
-
-    /* Ajusta o tamanho do botão final no celular */
-    .final-cta .cta-button {
-        padding: 15px 25px; /* Diminui o preenchimento interno */
-        font-size: 1.2em;   /* Diminui o tamanho da fonte */
-    }
-}
-
-/* Estilos da Nova Seção 6 (Escolha de Versão) */
-
-.choice-section {
-    padding: 80px 0;
-    background-color: #fdfaf5; /* Fundo creme claro */
-}
-.choice-header {
-    text-align: center;
-    margin-bottom: 60px;
-}
-.choice-header h2 {
-    font-size: 2.5em;
-    color: #4a4a4a;
-    margin-top: 0;
-}
-.pricing-grid {
-    display: flex;
-    justify-content: center;
-    align-items: stretch; /* Faz os blocos terem a mesma altura */
-    flex-wrap: wrap;
-    gap: 30px;
-}
-.pricing-card {
-    background-color: #ffffff;
-    border-radius: 12px;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
-    width: 320px;
-    padding: 40px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-/* --- NOVOS ESTILOS PARA A OFERTA --- */
-.pricing-card .price-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 15px; /* Espaço entre os preços */
-    margin: 10px 0;
-}
-
-.pricing-card .old-price {
-    font-size: 1.5em; /* Tamanho menor para o preço antigo */
-    color: #999; /* Cor cinza para indicar que está inativo */
-    text-decoration: line-through; /* O efeito de riscado */
-}
-
-.pricing-card .new-price {
-    font-size: 2.5em; /* Mantém o destaque no novo preço */
-    font-weight: bold;
-    color: #d9534f; /* Cor principal da oferta */
-}
-/* --- FIM DOS NOVOS ESTILOS --- */
-
-.pricing-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 12px 35px rgba(0,0,0,0.12);
-}
-.pricing-card h3 {
-    font-size: 1.8em;
-    color: #4a4a4a;
-    margin-top: 0;
-}
-.pricing-card .price {
-    font-size: 2.5em;
-    font-weight: bold;
-    color: #d9534f;
-    margin: 10px 0;
-}
-.pricing-card .price-note {
-    font-size: 0.9em;
-    color: #777;
-    margin-top: -10px;
-    margin-bottom: 25px;
-}
-.pricing-card ul {
-    list-style: none;
-    padding: 0;
-    margin: 0 0 30px 0;
-    text-align: left;
-    flex-grow: 1; /* Empurra o botão para baixo */
-}
-.pricing-card ul li {
-    margin-bottom: 12px;
-    color: #5f5f5f;
-}
-.pricing-card ul li::before {
-    content: '✓'; /* Ícone de check */
-    color: #28a745; /* Verde */
-    font-weight: bold;
-    margin-right: 10px;
-}
-.pricing-card .cta-button {
-    background-color: #d9534f;
-    color: white;
-    padding: 15px 30px;
-    border: none;
-    border-radius: 8px;
-    font-size: 1.1em;
-    font-weight: bold;
-    text-decoration: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-.pricing-card .cta-button:hover {
-    background-color: #c9302c;
-}
-/* Estilo para o card recomendado */
-
-.pricing-card.recommended {
-    border: 2px solid #d9534f;
-    position: relative;
-}
-.recommended-badge {
-    position: absolute;
-    top: -15px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: #d9534f;
-    color: white;
-    padding: 5px 15px;
-    border-radius: 20px;
-    font-size: 0.9em;
-    font-weight: bold;
-}
-/*.author {
-  text-align: center;
-  display: block;
-  margin-top: 20px;
-  font-style: italic;
-}*/
-
-
-
-/* --- FIM DAS NOVAS REGRAS DE RESPONSIVIDADE --- */
-
-
-    </style>
-
-    <!-- Meta Pixel Code -->
-    <script>
-    !function(f,b,e,v,n,t,s )
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js' );
-    fbq('init', '1993586931511444');
-    fbq('track', 'PageView');
-    </script>
-    <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=1993586931511444&ev=PageView&noscript=1"
-    /></noscript>
-    <!-- End Meta Pixel Code -->
-
-
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-T3G633NXRZ"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-T3G633NXRZ');
-    </script>
-
-    <!-- End Google Analytics Code -->
-
-
-
+    <title>Manual do Avô Moderno</title>
+    <meta name="description" content="Seja o avô que seus netos vão lembrar para sempre. Manual prático, humano e emocionante para avôs modernos.">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- HEADER -->
+    <header class="hero">
+        <h1>Seja o avô que seus netos vão lembrar para sempre.</h1>
+        <p class="sub-headline">Mesmo vivendo em um mundo cheio de tecnologia, correria e novas regras familiares.</p>
+        <p class="sub-title">Descubra como criar memórias inesquecíveis, fortalecer laços e participar da vida dos netos de um jeito moderno, leve e amoroso — sem brigar, sem invadir o espaço dos pais e sem se sentir “desatualizado”.</p>
+        <a href="#escolha-formato" class="cta-top">👉 Quero meu Manual do Avô Moderno agora</a>
+        <span class="oferta-top">Acesso imediato • Oferta por tempo limitado</span>
+    </header>
 
-    <!-- Seção 1: A Primeira Impressão -->
-    
-	<section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1>Descubra como ser o avô que seu neto jamais esquecerá.</h1>
-                <p>O guia definitivo para o avô do século 21: equilibre tradição e modernidade, e construa memórias inesquecíveis com seus netos.</p>
-                
-                <!-- Link que rola para a seção de escolha -->
-                <a href="#escolha" class="cta-button">QUERO MEU MANUAL AGORA</a>
+    <!-- SEÇÃO 1 -->
+    <section>
+        <h2>👨‍👧 POR QUE ESTE MANUAL EXISTE?</h2>
+        <p>Ser avô hoje não é como antigamente.</p>
+        <p>O mundo mudou. A forma de criar mudou. A tecnologia chegou.<br>
+           A rotina ficou corrida. E, junto disso tudo, nasce um papel novo: <b>O avô moderno.</b></p>
+        <ul>
+            <li>✔ ama como sempre</li>
+            <li>✔ apoia sem invadir</li>
+            <li>✔ entende o novo tempo</li>
+            <li>✔ cria memórias afetivas</li>
+            <li>✔ participa com leveza e sabedoria</li>
+        </ul>
+        <p>Este livro existe para ajudar você a viver esse papel da melhor forma possível.</p>
+    </section>
 
-                <span class="trust-text">Compra segura | Acesso imediato ao ebook.</span>
+    <!-- SEÇÃO 2 -->
+    <section class="destaque">
+        <h2>💛 O QUE VOCÊ VAI APRENDER</h2>
+        <ul>
+            <li>👶 Criar momentos simples que viram memórias para a vida toda</li>
+            <li>📚 Ensinar valores sem conflito com os pais</li>
+            <li>🤝 Fortalecer o vínculo com seus netos em qualquer idade</li>
+            <li>💬 Se comunicar melhor com filhos e noras/genros</li>
+            <li>📱 Usar tecnologia para se aproximar (não para afastar)</li>
+            <li>🧠 Entender o papel do avô no século 21</li>
+            <li>🧩 Brincar de forma segura, criativa e afetiva</li>
+            <li>❤️ Ser um porto seguro, exemplo e referência</li>
+        </ul>
+        <p>Tudo com uma linguagem leve, humana e emocionante.</p>
+    </section>
 
-                <!-- Adicione a imagem da capa do seu ebook -->
-                <!-- Para isso, coloque o arquivo da imagem na mesma pasta do arquivo HTML -->
-                <img src="capa-ebook.jpg" alt="Capa do Ebook Manual do Avô Moderno" class="ebook-cover">
+    <!-- SEÇÃO 3 -->
+    <section>
+        <h2>⭐ PARA QUEM ESTE LIVRO É PERFEITO</h2>
+        <ul>
+            <li>✔ é ou está prestes a ser avô</li>
+            <li>✔ quer estar mais presente</li>
+            <li>✔ quer evitar conflitos familiares</li>
+            <li>✔ quer criar memórias com os netos</li>
+            <li>✔ quer deixar um legado</li>
+            <li>✔ acredita no valor da família</li>
+            <li>✔ quer melhorar conversas e convivência</li>
+            <li>✔ busca se adaptar às novas gerações</li>
+        </ul>
+    </section>
+
+    <!-- SEÇÃO 4 -->
+    <section class="formatos" id="escolha-formato">
+        <h2>📘 ESCOLHA SEU FORMATO</h2>
+        <div class="produtos">
+            <div class="produto">
+                <h3>Digital (PDF)</h3>
+                <p class="preco-de">De R$ 49,90</p>
+                <p class="preco-por">Por <span>R$ 37,90</span></p>
+                <ul>
+                    <li>✔ acesso imediato</li>
+                    <li>✔ lê no celular, tablet ou computador</li>
+                    <li>✔ ideal para começar agora</li>
+                    <li>✔ conteúdo completo</li>
+                </ul>
+               <a href="https://pay.hotmart.com/J102313241Q?checkoutMode=10" class="botao-comprar" onclick="fbq('track', 'InitiateCheckout', {content_name: 'Ebook'});">Quero versão Digital</a>
+            </div>
+            <div class="produto">
+                <h3>Impresso</h3>
+                <p class="preco-de">De R$ 89,90</p>
+                <p class="preco-por">Por <span>R$ 77,90</span></p>
+                <ul>
+                    <li>✔ livro físico de alta qualidade</li>
+                    <li>✔ perfeito para presentear</li>
+                    <li>✔ coloca na estante, guarda como legado</li>
+                    <li>✔ envio para todo o Brasil</li>
+                </ul>
+                <a href="https://pay.hotmart.com/L102368343I?checkoutMode=10" class="botao-comprar" onclick="fbq('track', 'InitiateCheckout', {content_name: 'Livro Impresso'});">Quero versão Impressa</a>
             </div>
         </div>
     </section>
 
-    <!-- As próximas seções virão aqui -->
+    <!-- CTA principal -->
+    
+    <section class="cta-section">
+        <a href="#escolha-formato" class="cta-final">➡️ Quero meu Manual agora</a>
+    </section>
 
-<!-- Seção 2: A Conexão -->
 
-<section class="connection">
-    <div class="container">
-        <div class="connection-content">
-            <!-- Coloque a imagem da página 8 na mesma pasta -->
-            <div class="connection-image">
-               <img src="ilustracao-secao2.jpg" 
-     		    alt="Avô mostrando foto antiga para a neta"
-                    style="width: 60%; height: auto; display: block; margin: 0 auto;">
+    <!-- SEÇÃO 5 -->
+    <section class="autor">
+        <h2>👨‍🦳 SOBRE O AUTOR</h2>
+        <img src="autor.jpg" alt="Foto real do autor" class="autor-foto">
+        <blockquote>
+            “Ser avô mudou. E ninguém nos ensina como viver esse papel.”
+        </blockquote>
+        <p>O autor compartilha sua experiência real como avô moderno:</p>
+        <ul>
+            <li>histórias emocionantes</li>
+            <li>reflexões profundas</li>
+            <li>aprendizados com filhos e netos</li>
+            <li>situações práticas do dia a dia</li>
+            <li>sabedoria construída pela convivência familiar</li>
+        </ul>
+        <p>Nada técnico, nada formal demais. É vida real — escrita por quem vive na pele.</p>
+    </section>
 
-            </div>
-            <div class="connection-text">
-                <h2>Você se sente um "estranho no ninho"?</h2>
-                <p>
-                    Você sonhava com a chegada do neto, pronto para repetir a magia da casa dos seus próprios avós. Mas, de repente, se deparou com um mundo novo de regras sobre telas, açúcar e segurança que não existia na sua época. Se você já se sentiu perdido, com medo de fazer algo 'errado' ou de ser o 'vovô que estraga', saiba que você não está sozinho. <strong>Este manual foi escrito para você.</strong>
-                </p>
-            </div>
-        </div>
+    <!-- SEÇÃO 6 -->
+   <section class="depoimentos">
+    <h2>⭐ DEPOIMENTOS</h2>
+    <div class="depoimento">
+        <p>“Estou amando o livro. Estou aqui pensando: vivi os dois mundos, o de antes, como neta e criança e o mundo de agora, como mãe. E agora, como serei como Avó, tendo vivido os dois ‘mundos’ 🤔 ”<br>
+        <b>Ana Flávia F.</b>, Mãe da Clara e do Daniel</p>
     </div>
-</section>
-
-<!-- Seção 3: A Solução -->
-
-<section class="solution">
-    <div class="container">
-        <div class="solution-header">
-            <h2>Um Manual Prático Para o Melhor Papel da Sua Vida</h2>
-        </div>
-        <div class="solution-grid">
-            <div class="benefit-item">
-                <div class="icon">🗣️</div>
-                <h3>Comunicação sem Conflitos</h3>
-                <p>Aprenda "frases mágicas" para dialogar com seus filhos, respeitar as regras deles e se tornar o maior aliado da família.</p>
-            </div>
-            <div class="benefit-item">
-                <div class="icon">🎲</div>
-                <h3>Brincadeiras Criativas e Seguras</h3>
-                <p>Descubra como transformar a sala de estar em um forte de lençol e o quintal em uma expedição, criando diversão com o que você já tem.</p>
-            </div>
-            <div class="benefit-item">
-                <div class="icon">🍎</div>
-                <h3>Afeto que Nutre</h3>
-                <p>Veja como demonstrar todo o seu carinho de formas que vão além do açúcar, com momentos que alimentam a alma.</p>
-            </div>
-            <div class="benefit-item">
-                <div class="icon">📱</div>
-                <h3>Tecnologia como Ponte</h3>
-                <p>Use a tecnologia a seu favor para se conectar com netos que moram longe e participar ativamente do dia a dia deles.</p>
-            </div>
-            <div class="benefit-item">
-                <div class="icon">❤️</div>
-                <h3>Construindo um Legado Eterno</h3>
-                <p>Aprenda a usar suas próprias histórias para criar uma conexão profunda e deixar uma marca de amor que o tempo não apaga.</p>
-            </div>
-        </div>
+    <div class="depoimento">
+        <p>“Júnior que livro admirável! Escrito com muita sensatez e colocando todos os detalhes das preocupações de todos os avós de hoje. Um abraço para todos vocês.”<br>
+        <b>Cida D.</b>, Avó do Luiz Felipe, Rafael, Guilherme e Erasto</p>
     </div>
-</section>
-
-<!-- Seção 4: Prova Social (Depoimentos) -->
-
-<section class="testimonials">
-    <div class="container">
-        <div class="testimonials-header">
-            <h2>O que outros avós (e pais) estão dizendo:</h2>
-        </div>
-        <div class="testimonials-grid">
-            <div class="testimonial-card">
-                <p class="quote">"Estou amando o livro. Estou aqui pensando: vivi os dois mundos, o de antes, como neta e criança e o mundo de agora, como mãe. E agora, como serei como Avó, tendo vivido os dois “mundos “ 🤔
-."</p>
-                <p class="author">- Ana Flávia F., Mãe da Clara e do Daniel</p>
-            </div>
-            <div class="testimonial-card">
-                <p class="quote">"Júnior que livro admirável! Escrito com muita sensatez e colocando todos os detalhes das preocupacões de todos os avós de hoje. Um abraço para todos vocês."</p>
-                <p class="author">- Cida D., Avó do Luiz Felipe, Rafael, Guilherme e Erasto</p>
-            </div>
-            <div class="testimonial-card">
-                <p class="quote">"Livro sensacional!!! Vale como Manual do Avô e dos Pais também, pois tem dicas maravilhosas para essa saudável interacão de geracões!!! Parabéns Júnior."</p>
-                <p class="author">- Márcio C., Pai da Luisa e da Olívia</p>
-            </div>
-        </div>
+    <div class="depoimento">
+        <p>“Livro sensacional!!! Vale como Manual do Avô e dos Pais também, pois tem dicas maravilhosas para essa saudável interação de gerações!!! Parabéns Júnior.”<br>
+        <b>Márcio C.</b>, Pai da Luísa e da Olívia</p>
     </div>
-</section>
-
-<!-- Seção 5: Sobre o Autor -->
-
-<section class="author">
-    <div class="container">
-        <div class="author-content">
-            <div class="author-photo">
-                <!-- Coloque uma foto sua na mesma pasta -->
-                <img src="juniorebook6hd.jpg" alt="Foto de Geraldo Lima Júnior, autor do livro">
-            </div>
-            <div class="author-bio">
-                <h2>Sobre o Autor</h2>
-                <p>
-                    Geraldo Lima Júnior não é um especialista em parentalidade, nem um psicólogo infantil. Ele é algo muito mais importante: um avô. Como muitos de sua geração, ele se viu em um novo mundo ao se tornar avô de Helena, cheio de regras que o fizeram se sentir um "estranho no ninho".
-                </p>
-                <p>
-                    Foi dessa jornada de adaptação, aprendizado e, acima de tudo, de um amor imenso, que nasceu o "Manual do Avô Moderno". Nele, Júnior compartilha, de avô para avô, as descobertas e os acertos no desafio de equilibrar tradição com modernidade, transformando a dúvida em conexão.
-                </p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Nova Seção 6: Escolha a Sua Versão -->
-
-<section id="escolha" class="choice-section">
-<section class="choice-section">
-    <div class="container">
-        <div class="choice-header">
-            <h2>Escolha o formato ideal para você</h2>
-        </div>
-        <div class="pricing-grid">
-            <!-- Card do Ebook -->
-            <div class="pricing-card">
-                <!--div class="recommended-badge">Mais Vendido</div-->
-	<!-- Implantacao da oferta  -->
-                <h3>Versão Digital (Ebook)</h3>
-		<div class="price-wrapper">
-    		  <span class="old-price">R$ 59,90</span>
-    		  <span class="new-price">R$ 27,70</span>
-	        </div>
-	        <p class="price-note">Oferta de Lançamento!</p>
-
-	<!-- Fim Implantacao da oferta  -->
-
-                <ul>
-                    <li>Acesso imediato após a compra</li>
-                    <li>Leia no celular, tablet ou computador</li>
-                    <li>Leve com você para qualquer lugar</li>
-                    <li>Amigo do meio ambiente</li>
-                </ul>
-                <!-- Link da Hotmart para o Ebook -->
-                <a href="https://pay.hotmart.com/J102313241Q?checkoutMode=10" class="cta-button" onclick="fbq('track', 'InitiateCheckout', {content_name: 'Ebook'});">COMPRAR EBOOK</a>
-
-            </div>
-
-            <!-- Card do Livro Físico -->
-            <div class="pricing-card recommended">
-		<div class="recommended-badge">Mais Vendido</div>
-
-	<!-- Implantacao da oferta -->
-
-              <h3>Versão Impressa</h3>
-	      <div class="price-wrapper">
-   	 	<span class="old-price">R$ 89,90</span>
-    		<span class="new-price">R$ 77,70</span>
-	      </div>
-              <p class="price-note">Oferta de Lançamento + Frete Incluso</p>
-
-	<!-- Fim Implantacao da oferta  -->
-
-                <ul>
-                    <li>A experiência clássica da leitura</li>
-                    <li>Perfeito para presentear um avô querido</li>
-                    <li>Uma recordação física para a estante</li>
-                    <li>Qualidade de impressão profissional</li>
-                </ul>
-                <!-- Link para a página de compra do livro físico -->
-                <a href="https://pay.hotmart.com/L102368343I?checkoutMode=10" class="cta-button" onclick="fbq('track', 'InitiateCheckout', {content_name: 'Livro Impresso'});">COMPRAR LIVRO FÍSICO</a>
-
-            </div>
-        </div>
+    <div class="depoimento">
+        <p>“Me ajudou a entender melhor meu papel na família.”<br>
+        <b>Geraldo L.</b>, Avô da Maria</p>
     </div>
 </section>
 
 
+    <!-- SEÇÃO 7 -->
+    <section class="garantia">
+        <h2>🛡️ GARANTIA</h2>
+        <p>Garantia incondicional de <b>7 dias</b></p>
+        <p>Se o livro não ajudar você a se aproximar mais dos seus netos, se não sentir que valeu a pena…<br>
+        <b>Devolvemos 100% do valor.</b><br>
+        Sem perguntas, sem burocracia.</p>
+    </section>
 
-<!-- Rodapé -->
-<footer class="footer">
-    <div class="container">
-        <p>© 2025 Geraldo Lima Júnior. Todos os direitos reservados.</p>
+    <!-- SEÇÃO FINAL -->
+    <section class="ultimacto">
+        <h2>🎯 ÚLTIMA CHANCE</h2>
+        <p>Você tem duas opções hoje:</p>
+        <ul>
+            <li>Deixar o tempo passar e continuar vivendo os momentos do jeito que dá.</li>
+            <li><b>Ou transformar sua relação com seus netos começando agora.</b></li>
+        </ul>
+       <!-- Botão CTA da seção final -->
+       <a href="#escolha-formato" class="cta-final grande">👉 Quero meu Manual do Avô Moderno</a>
+
+        <span class="oferta-final">Oferta especial • Por tempo limitado</span>
+    </section>
+    <footer>
+        <p>&copy; 2025 Geraldo Lima Júnior. Todos os direitos reservados.</p>
         <p>Para dúvidas ou suporte, entre em contato: <a href="mailto:limajunior.geraldo@gmail.com">limajunior.geraldo@gmail.com</a></p>
-        <div class="social-icon">
-            <a href="https://www.instagram.com/DeAvoParaAvo" target="_blank" title="Siga no Instagram">📸</a>
-        </div>
-    </div>
-</footer>
-
+    </footer>
 
 </body>
 </html>
