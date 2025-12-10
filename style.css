@@ -1,0 +1,205 @@
+/* Reset simples */
+* {margin:0; padding:0; box-sizing:border-box;}
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f7fafc;
+    color: #222;
+    line-height: 1.7;
+}
+header.hero {
+    background: #ffe8b2;
+    text-align: center;
+    padding: 48px 16px 24px;
+    border-bottom: 2px solid #ffd36c;
+}
+header.hero h1 {
+    color: #e1751c;
+    font-size: 2rem;
+    margin-bottom: 18px;
+}
+header.hero .sub-headline {
+    color:#b87714;
+    font-size:1.1rem;
+}
+header.hero .sub-title {
+    color: #454545;
+    margin: 12px auto 18px;
+    max-width: 650px;
+    font-size: 1.17rem;
+}
+.cta-top, .cta-final, .botao-comprar {
+    display: inline-block;
+    background: #e1751c;
+    color: #fff !important;
+    font-weight: bold;
+    letter-spacing: .04em;
+    padding: 15px 32px;
+    border-radius:30px;
+    margin: 14px auto 6px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: background .2s;
+    box-shadow:0 1px 6px #ffd36c50;
+}
+.cta-top:hover, .cta-final:hover, .botao-comprar:hover {
+    background: #b96a19;
+}
+.oferta-top, .oferta-final {
+    display:block;
+    font-size:.97rem;
+    color:#b87714;
+    margin-bottom:10px;
+    margin-top:2px;
+}
+section {
+    max-width: 720px;
+    margin: 40px auto;
+    padding: 32px 20px 20px;
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 1px 15px #ead7ad20;
+}
+section.destaque {
+    background: #feffe2;
+    border: 1px solid #ffd36c;
+}
+section h2 {
+    font-size:1.38rem;
+    color: #e1751c;
+    margin-bottom:12px;
+}
+ul {
+    margin-bottom:12px;
+}
+ul li {
+    margin-bottom: 7px;
+    list-style: none;
+    padding-left: .9em;
+    text-indent: -.9em;
+}
+.formatos .produtos {
+    display:flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    justify-content: center;
+    margin-top:16px;
+    transition: box-shadow 0.3s, transform 0.2s, border-color 0.2s;
+}
+.formatos .produto {
+    background: #fff8e7;
+    border:1px solid #ffd36c;
+    border-radius:14px;
+    padding:18px;
+    width:270px;
+    box-shadow: 0 1px 10px #ffd36c20;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.formatos .produto:hover {
+    box-shadow: 0 5px 25px #ffb95755;
+    border-color: #e1751c;
+    transform: translateY(-6px) scale(1.03);
+    background: #fff4de;
+    z-index: 1;
+
+}
+.produto h3 {
+    font-size:1.13rem;
+    color:#bb670d;
+    margin-bottom: 8px;
+}
+.preco-de {
+    color:#b87714;
+    text-decoration: line-through;
+    margin-bottom:2px;
+}
+.preco-por span {
+    font-size:1.22rem;
+    color:#e1751c;
+    font-weight:bold;
+}
+.produto ul {
+    margin-bottom: 18px;
+}
+.botao-comprar {
+    width: 100%;
+    text-align: center;
+    margin-top: auto;
+}
+.cta-section {
+    text-align: center;
+    margin-top: 32px;
+    margin-bottom: -10px;
+}
+.cta-final.grande {
+    font-size:1.19rem;
+    padding:19px 44px;
+    margin:24px auto 12px;
+    display:inline-block;
+}
+.autor {
+    text-align: center;
+}
+.autor-foto {
+    border-radius: 30%;
+    width: 110px;
+    height: 110px;
+    object-fit:cover;
+    margin-bottom: 13px;
+    border:3px solid #ffd36c;
+}
+.autor blockquote {
+    font-style: italic;
+    color:#c99c59;
+    font-size:1.08rem;
+    margin:12px auto 18px;
+}
+.depoimentos .depoimento {
+    background: #f9f6ed;
+    border-left: 4px solid #e1751c;
+    margin-bottom: 16px;
+    padding: 11px 26px;
+    border-radius: 10px;
+    color: #444;
+    font-size:1.04rem;
+}
+.garantia {
+    text-align: center;
+    border:2px dashed #ffd36c;
+    background:#fffdfa;
+}
+.ultimacto {
+    text-align: center;
+    background: #fffcf2;
+    border: 2px solid #ffedbf;
+}
+footer {
+    margin:24px auto 0;
+    text-align: center;
+    color: #c99c59;
+    font-size: .93rem;
+    background: #ffedd1;
+    padding: 8px 0;
+    border-radius: 0 0 12px 12px;
+    border-top: 1px solid #ffd36c;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+/* Responsivo */
+@media (max-width: 748px) {
+    section, .formatos .produtos { flex-direction: column; }
+    .formatos .produto { width:100%; }
+}
+
+@media (max-width: 550px) {
+    header.hero {padding: 32px 7px 15px;}
+    section {padding:24px 5px 12px;}
+    .cta-top, .cta-final, .botao-comprar {font-size:.97rem; padding:12px 6px;}
+    .cta-final.grande {font-size:1.04rem; padding:13px 0;}
+}
